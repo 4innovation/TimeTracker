@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -199,10 +199,16 @@ http://www.xganon.com</description>
 <pad name="3.3V" x="-10.16" y="24.13" drill="0.8" shape="long" rot="R180"/>
 <pad name="AREF" x="-10.16" y="21.59" drill="0.8" shape="long" rot="R180"/>
 <pad name="5V" x="-10.16" y="-1.27" drill="0.8" shape="long"/>
+<pad name="ICSP2" x="-5.08" y="-7.62" drill="0.8" rot="R90"/>
+<pad name="ICSP4" x="-2.54" y="-7.62" drill="0.8" rot="R90"/>
+<pad name="ICSP6" x="0" y="-7.62" drill="0.8" rot="R90"/>
 <pad name="A4" x="-10.16" y="8.89" drill="0.8" shape="long" rot="R180"/>
 <pad name="A5" x="-10.16" y="6.35" drill="0.8" shape="long" rot="R180"/>
 <pad name="A6" x="-10.16" y="3.81" drill="0.8" shape="long" rot="R180"/>
 <pad name="A7" x="-10.16" y="1.27" drill="0.8" shape="long" rot="R180"/>
+<pad name="ICSP1" x="-5.08" y="-10.16" drill="0.8" rot="R90"/>
+<pad name="ICSP3" x="-2.54" y="-10.16" drill="0.8" rot="R90"/>
+<pad name="ICSP5" x="0" y="-10.16" drill="0.8" rot="R90"/>
 </package>
 <package name="STEP-STICK">
 <pad name="EN" x="3.81" y="5.08" drill="0.8" shape="long"/>
@@ -353,6 +359,10 @@ http://www.xganon.com</description>
 <symbol name="NANO">
 <pin name="3.3V" x="-22.86" y="12.7" visible="pin" length="middle"/>
 <pin name="AREF" x="-22.86" y="10.16" visible="pin" length="middle"/>
+<pin name="ICSP1" x="-10.16" y="-27.94" visible="off" length="point" rot="R270"/>
+<pin name="ICSP2" x="-10.16" y="-25.4" visible="off" length="point" rot="R270"/>
+<pin name="ICSP3" x="-7.62" y="-27.94" visible="off" length="point" rot="R270"/>
+<pin name="ICSP4" x="-7.62" y="-25.4" visible="off" length="point" rot="R270"/>
 <pin name="TX0" x="10.16" y="-20.32" visible="pin" length="middle" rot="R180"/>
 <pin name="RX1" x="10.16" y="-17.78" visible="pin" length="middle" rot="R180"/>
 <pin name="RST1" x="10.16" y="-15.24" visible="pin" length="middle" rot="R180"/>
@@ -381,6 +391,8 @@ http://www.xganon.com</description>
 <pin name="A6" x="-22.86" y="-7.62" visible="pin" length="middle"/>
 <pin name="A5SCL" x="-22.86" y="-5.08" visible="pin" length="middle"/>
 <pin name="A4SDA" x="-22.86" y="-2.54" visible="pin" length="middle"/>
+<pin name="ICSP5" x="-5.08" y="-27.94" visible="off" length="point" rot="R270"/>
+<pin name="ICSP6" x="-5.08" y="-25.4" visible="off" length="point" rot="R270"/>
 <wire x1="-17.78" y1="17.78" x2="-17.78" y2="-30.48" width="0.254" layer="94"/>
 <wire x1="-17.78" y1="-30.48" x2="5.08" y2="-30.48" width="0.254" layer="94"/>
 <wire x1="5.08" y1="-30.48" x2="5.08" y2="17.78" width="0.254" layer="94"/>
@@ -594,6 +606,12 @@ Sparkfun.com</description>
 <connect gate="G$1" pin="D9" pad="D9"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="GND2" pad="GND1"/>
+<connect gate="G$1" pin="ICSP1" pad="ICSP1"/>
+<connect gate="G$1" pin="ICSP2" pad="ICSP2"/>
+<connect gate="G$1" pin="ICSP3" pad="ICSP3"/>
+<connect gate="G$1" pin="ICSP4" pad="ICSP4"/>
+<connect gate="G$1" pin="ICSP5" pad="ICSP5"/>
+<connect gate="G$1" pin="ICSP6" pad="ICSP6"/>
 <connect gate="G$1" pin="NC" pad="5V"/>
 <connect gate="G$1" pin="RST" pad="RST"/>
 <connect gate="G$1" pin="RST1" pad="RST1"/>

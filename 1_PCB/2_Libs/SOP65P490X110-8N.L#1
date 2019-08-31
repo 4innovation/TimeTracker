@@ -102,20 +102,9 @@
 <devicesets>
 <deviceset name="RTC">
 <gates>
-<gate name="G$1" symbol="RTC" x="0" y="2.54"/>
 </gates>
 <devices>
-<device name="" package="SOP65P490X110-8N">
-<connects>
-<connect gate="G$1" pin="!INT" pad="7"/>
-<connect gate="G$1" pin="OSC1" pad="1"/>
-<connect gate="G$1" pin="OSC2" pad="2"/>
-<connect gate="G$1" pin="SCL" pad="6"/>
-<connect gate="G$1" pin="SDA" pad="5"/>
-<connect gate="G$1" pin="VBAT" pad="3"/>
-<connect gate="G$1" pin="VDD" pad="8"/>
-<connect gate="G$1" pin="VSS" pad="4"/>
-</connects>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
