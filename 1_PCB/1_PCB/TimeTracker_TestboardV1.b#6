@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1776,6 +1776,53 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0093.pdf</description>
 </package3d>
 </packages3d>
 </library>
+<library name="SamacSys_Parts">
+<description>&lt;b&gt;https://eagle.componentsearchengine.com&lt;/b&gt;&lt;p&gt;&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="FX135">
+<description>&lt;b&gt;FX135&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+<smd name="2" x="1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+<text x="-0.357" y="0.08" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.357" y="0.08" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.6" y1="0.75" x2="1.6" y2="0.75" width="0.2" layer="51"/>
+<wire x1="1.6" y1="0.75" x2="1.6" y2="-0.75" width="0.2" layer="51"/>
+<wire x1="1.6" y1="-0.75" x2="-1.6" y2="-0.75" width="0.2" layer="51"/>
+<wire x1="-1.6" y1="-0.75" x2="-1.6" y2="0.75" width="0.2" layer="51"/>
+<wire x1="-0.4" y1="0.75" x2="0.4" y2="0.75" width="0.2" layer="21"/>
+<wire x1="-0.4" y1="-0.75" x2="0.4" y2="-0.75" width="0.2" layer="21"/>
+</package>
+<package name="SMTM1225">
+<description>&lt;b&gt;SMTM1225&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-8.05" y="0" dx="3.2" dy="3.2" layer="1"/>
+<smd name="2" x="0" y="0" dx="3.2" dy="3.2" layer="1"/>
+<smd name="3" x="8.05" y="0" dx="3.2" dy="3.2" layer="1"/>
+<text x="-0.346" y="0.173" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.346" y="0.173" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-6.6" y1="5.3" x2="-6.6" y2="-5.3" width="0.254" layer="51"/>
+<wire x1="6.6" y1="5.3" x2="6.6" y2="-5.3" width="0.254" layer="51"/>
+<wire x1="-6.6" y1="-5.3" x2="-4.778" y2="-5.3" width="0.254" layer="51"/>
+<wire x1="6.6" y1="-5.3" x2="4.778" y2="-5.3" width="0.254" layer="51"/>
+<wire x1="-4.778" y1="-5.3" x2="4.778" y2="-5.3" width="0.254" layer="51" curve="-92.4"/>
+<wire x1="6.6" y1="5.3" x2="3.603" y2="5.3" width="0.254" layer="51"/>
+<wire x1="-6.6" y1="5.3" x2="-3.603" y2="5.3" width="0.254" layer="51"/>
+<wire x1="-3.603" y1="5.3" x2="3.603" y2="5.3" width="0.254" layer="51" curve="72.2"/>
+<wire x1="-6.6" y1="-5.3" x2="-4.778" y2="-5.3" width="0.254" layer="21"/>
+<wire x1="4.778" y1="-5.3" x2="6.6" y2="-5.3" width="0.254" layer="21"/>
+<wire x1="6.6" y1="5.3" x2="3.603" y2="5.3" width="0.254" layer="21"/>
+<wire x1="-3.603" y1="5.3" x2="-6.6" y2="5.3" width="0.254" layer="21"/>
+<wire x1="-3.603" y1="5.3" x2="3.603" y2="5.3" width="0.254" layer="21" curve="72.2"/>
+<wire x1="4.778" y1="-5.3" x2="-4.778" y2="-5.3" width="0.254" layer="21" curve="92.4"/>
+<wire x1="-6.6" y1="-5.3" x2="-6.6" y2="-1.95" width="0.254" layer="21"/>
+<wire x1="-6.6" y1="5.3" x2="-6.6" y2="1.95" width="0.254" layer="21"/>
+<wire x1="6.6" y1="5.3" x2="6.6" y2="1.95" width="0.254" layer="21"/>
+<wire x1="6.6" y1="-5.3" x2="6.6" y2="-1.95" width="0.254" layer="21"/>
+<circle x="-10.685" y="0.037" radius="0.08293125" width="0.254" layer="25"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1969,15 +2016,15 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="J1" library="2908-05WB-MG" package="3M_2908-05WB-MG" value="2908-05WB-MG" x="7.62" y="7.62" smashed="yes" rot="R180">
-<attribute name="AVAILABILITY" value="Unavailable" x="-15.24" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DESCRIPTION" value=" 2908-05WB-MG Conn Micro S D Card HDR 8 POS 1.1mm So lder RA SMD T/R 0.5A RoHS " x="-15.24" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="3M" x="-15.24" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MP" value="2908-05WB-MG" x="-15.24" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="15.26195" y="14.521759375" size="1.27031875" layer="25" rot="R270"/>
-<attribute name="PACKAGE" value="None" x="-15.24" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="PRICE" value="None" x="-15.24" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="-1.041390625" y="14.62111875" size="1.2702" layer="27" rot="R270"/>
+<element name="J1" library="2908-05WB-MG" package="3M_2908-05WB-MG" value="2908-05WB-MG" x="7.62" y="34.29" smashed="yes" rot="R270">
+<attribute name="AVAILABILITY" value="Unavailable" x="-40.64" y="11.43" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DESCRIPTION" value=" 2908-05WB-MG Conn Micro S D Card HDR 8 POS 1.1mm So lder RA SMD T/R 0.5A RoHS " x="-40.64" y="11.43" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="3M" x="-40.64" y="11.43" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MP" value="2908-05WB-MG" x="-40.64" y="11.43" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="0.718240625" y="41.93195" size="1.27031875" layer="25"/>
+<attribute name="PACKAGE" value="None" x="-40.64" y="11.43" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE" value="None" x="-40.64" y="11.43" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="0.61888125" y="25.628609375" size="1.2702" layer="27"/>
 </element>
 <element name="U$1" library="NanoUSW" package="NANO" value="NANO" x="49.53" y="30.48" smashed="yes"/>
 <element name="U$2" library="SOP65P490X110-8N" package="SOP65P490X110-8N" value="RTC" x="21.59" y="49.53" smashed="yes">
@@ -2077,6 +2124,30 @@ design rules under a new name.</description>
 <attribute name="NAME" x="35.56" y="20.701" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="35.56" y="16.129" size="1.27" layer="27" ratio="10"/>
 </element>
+<element name="Y1" library="SamacSys_Parts" package="FX135" value="FX135A-327" x="-10.16" y="-12.7" smashed="yes">
+<attribute name="DESCRIPTION" value="Crystal SMD 32.768kHz 1.5x3.2mm Crystal 32.768kHz, +/-20ppm, 2-Pin SMD, 3.2 x 1.5 x 0.9mm" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Fox" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="FX135A-327" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="559-FX135A-327" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=559-FX135A-327" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-10.517" y="-12.62" size="1.27" layer="25" align="center"/>
+<attribute name="RS_PART_NUMBER" value="6480200P" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/6480200P" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-10.517" y="-12.62" size="1.27" layer="27" align="center"/>
+</element>
+<element name="U5" library="SamacSys_Parts" package="SMTM1225" value="SMTM1225" x="-5.08" y="-20.32" smashed="yes">
+<attribute name="DESCRIPTION" value="Coin Cell Battery Holders SMT HOLDER FOR CR1225" x="-5.08" y="-20.32" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="-5.08" y="-20.32" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="RENATA" x="-5.08" y="-20.32" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="SMTM1225" x="-5.08" y="-20.32" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="614-SMTM1225" x="-5.08" y="-20.32" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=614-SMTM1225" x="-5.08" y="-20.32" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-5.426" y="-20.147" size="1.27" layer="25" align="center"/>
+<attribute name="RS_PART_NUMBER" value="" x="-5.08" y="-20.32" size="1.778" layer="27" display="off"/>
+<attribute name="RS_PRICE-STOCK" value="" x="-5.08" y="-20.32" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-5.426" y="-20.147" size="1.27" layer="27" align="center"/>
+</element>
 </elements>
 <signals>
 <signal name="3V3">
@@ -2088,7 +2159,7 @@ design rules under a new name.</description>
 <wire x1="25.14" y1="67.59" x2="72.39" y2="69.85" width="0" layer="19" extent="1-1"/>
 <wire x1="25.4" y1="64.45" x2="25.14" y2="67.59" width="0" layer="19" extent="1-1"/>
 <wire x1="23.7" y1="50.505" x2="25.4" y2="64.45" width="0" layer="19" extent="1-1"/>
-<wire x1="6.26" y1="4.32" x2="23.7" y2="50.505" width="0" layer="19" extent="1-1"/>
+<wire x1="10.92" y1="32.93" x2="23.7" y2="50.505" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="C2" pad="2"/>
@@ -2119,6 +2190,26 @@ design rules under a new name.</description>
 <contactref element="RESET1" pad="3"/>
 <contactref element="RESET1" pad="4"/>
 <contactref element="LED_12V1" pad="C"/>
+<contactref element="U5" pad="2"/>
+<wire x1="54.61" y1="29.21" x2="77.47" y2="69.85" width="0" layer="19" extent="1-1"/>
+<wire x1="39.37" y1="24.13" x2="54.61" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="34.6202" y1="22.1234" x2="39.37" y2="24.13" width="0" layer="19" extent="1-1"/>
+<wire x1="28.1178" y1="22.1234" x2="34.6202" y2="22.1234" width="0" layer="19" extent="1-1"/>
+<wire x1="35.523" y1="15.57" x2="34.6202" y2="22.1234" width="0" layer="19" extent="1-1"/>
+<wire x1="35.523" y1="9.22" x2="35.523" y2="15.57" width="0" layer="19" extent="1-1"/>
+<wire x1="26.633" y1="15.57" x2="28.1178" y2="22.1234" width="0" layer="19" extent="1-1"/>
+<wire x1="26.633" y1="9.22" x2="26.633" y2="15.57" width="0" layer="19" extent="1-1"/>
+<wire x1="10.92" y1="30.73" x2="28.1178" y2="22.1234" width="0" layer="19" extent="1-1"/>
+<wire x1="19.48" y1="48.555" x2="10.92" y2="30.73" width="0" layer="19" extent="1-1"/>
+<wire x1="10.16" y1="55.92" x2="19.48" y2="48.555" width="0" layer="19" extent="1-1"/>
+<wire x1="1.27" y1="59.91" x2="10.16" y2="55.92" width="0" layer="19" extent="1-1"/>
+<wire x1="7.62" y1="66.99" x2="1.27" y2="59.91" width="0" layer="19" extent="1-1"/>
+<wire x1="12.446" y1="67.117" x2="7.62" y2="66.99" width="0" layer="19" extent="1-1"/>
+<wire x1="5.89" y1="74.93" x2="7.62" y2="66.99" width="0" layer="19" extent="1-1"/>
+<wire x1="20.574" y1="63.439" x2="12.446" y2="67.117" width="0" layer="19" extent="1-1"/>
+<wire x1="25.4" y1="62.55" x2="20.574" y2="63.439" width="0" layer="19" extent="1-1"/>
+<wire x1="22.86" y1="74.89" x2="20.574" y2="63.439" width="0" layer="19" extent="1-1"/>
+<wire x1="-5.08" y1="-20.32" x2="26.633" y2="9.22" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFIDRESET">
 <contactref element="JP1" pad="7"/>
@@ -2141,14 +2232,14 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="D11"/>
 <contactref element="J1" pad="7"/>
 <wire x1="54.61" y1="54.61" x2="85.09" y2="69.85" width="0" layer="19" extent="1-1"/>
-<wire x1="2.96" y1="4.52" x2="54.61" y2="54.61" width="0" layer="19" extent="1-1"/>
+<wire x1="10.72" y1="29.63" x2="54.61" y2="54.61" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPISCK">
 <contactref element="JP1" pad="2"/>
 <contactref element="U$1" pad="D13"/>
 <contactref element="J1" pad="5"/>
 <wire x1="39.37" y1="57.15" x2="87.63" y2="69.85" width="0" layer="19" extent="1-1"/>
-<wire x1="5.16" y1="4.52" x2="39.37" y2="57.15" width="0" layer="19" extent="1-1"/>
+<wire x1="10.72" y1="31.83" x2="39.37" y2="57.15" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFIDCS">
 <contactref element="JP3" pad="2"/>
@@ -2255,6 +2346,21 @@ design rules under a new name.</description>
 <wire x1="52.959" y1="58.42" x2="52.959" y2="20.32" width="0.1524" layer="1"/>
 <wire x1="52.959" y1="20.32" x2="41.021" y2="20.32" width="0.1524" layer="1"/>
 <wire x1="41.021" y1="20.32" x2="41.021" y2="58.42" width="0.1524" layer="1"/>
+</signal>
+<signal name="N$14">
+<contactref element="Y1" pad="2"/>
+<contactref element="U$2" pad="1"/>
+<wire x1="-8.91" y1="-12.7" x2="19.48" y2="50.505" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$15">
+<contactref element="Y1" pad="1"/>
+<contactref element="U$2" pad="2"/>
+<wire x1="-11.41" y1="-12.7" x2="19.48" y2="49.855" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$16">
+<contactref element="U5" pad="1"/>
+<contactref element="U$2" pad="3"/>
+<wire x1="-13.13" y1="-20.32" x2="19.48" y2="49.205" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
