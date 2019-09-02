@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -10865,7 +10865,7 @@ Source: www.kingbright.com</description>
 <attribute name="VALUE" x="-155.956" y="175.641" size="1.778" layer="96"/>
 </instance>
 <instance part="GND1" gate="1" x="-172.72" y="167.64" smashed="yes">
-<attribute name="VALUE" x="-175.26" y="165.1" size="1.778" layer="96"/>
+<attribute name="VALUE" x="-170.18" y="167.64" size="1.778" layer="96"/>
 </instance>
 <instance part="GND3" gate="1" x="-205.74" y="175.26" smashed="yes">
 <attribute name="VALUE" x="-208.28" y="172.72" size="1.778" layer="96"/>
@@ -10899,7 +10899,7 @@ Source: www.kingbright.com</description>
 <attribute name="VALUE" x="-124.46" y="104.14" size="1.778" layer="96"/>
 </instance>
 <instance part="IC2" gate="A1" x="-170.18" y="160.02" smashed="yes">
-<attribute name="NAME" x="-177.8" y="165.735" size="1.778" layer="95"/>
+<attribute name="NAME" x="-167.64" y="163.195" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-177.8" y="163.195" size="1.778" layer="96"/>
 </instance>
 <instance part="C3" gate="G$1" x="-187.96" y="152.4" smashed="yes">

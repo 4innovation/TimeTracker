@@ -10774,6 +10774,133 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SamacSys_Parts">
+<description>&lt;b&gt;https://eagle.componentsearchengine.com&lt;/b&gt;&lt;p&gt;&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="FX135">
+<description>&lt;b&gt;FX135&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+<smd name="2" x="1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+<text x="-0.357" y="0.08" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.357" y="0.08" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.6" y1="0.75" x2="1.6" y2="0.75" width="0.2" layer="51"/>
+<wire x1="1.6" y1="0.75" x2="1.6" y2="-0.75" width="0.2" layer="51"/>
+<wire x1="1.6" y1="-0.75" x2="-1.6" y2="-0.75" width="0.2" layer="51"/>
+<wire x1="-1.6" y1="-0.75" x2="-1.6" y2="0.75" width="0.2" layer="51"/>
+<wire x1="-0.4" y1="0.75" x2="0.4" y2="0.75" width="0.2" layer="21"/>
+<wire x1="-0.4" y1="-0.75" x2="0.4" y2="-0.75" width="0.2" layer="21"/>
+</package>
+<package name="SMTM1225">
+<description>&lt;b&gt;SMTM1225&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-8.05" y="0" dx="3.2" dy="3.2" layer="1"/>
+<smd name="2" x="0" y="0" dx="3.2" dy="3.2" layer="1"/>
+<smd name="3" x="8.05" y="0" dx="3.2" dy="3.2" layer="1"/>
+<text x="-0.346" y="0.173" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.346" y="0.173" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-6.6" y1="5.3" x2="-6.6" y2="-5.3" width="0.254" layer="51"/>
+<wire x1="6.6" y1="5.3" x2="6.6" y2="-5.3" width="0.254" layer="51"/>
+<wire x1="-6.6" y1="-5.3" x2="-4.778" y2="-5.3" width="0.254" layer="51"/>
+<wire x1="6.6" y1="-5.3" x2="4.778" y2="-5.3" width="0.254" layer="51"/>
+<wire x1="-4.778" y1="-5.3" x2="4.778" y2="-5.3" width="0.254" layer="51" curve="-92.4"/>
+<wire x1="6.6" y1="5.3" x2="3.603" y2="5.3" width="0.254" layer="51"/>
+<wire x1="-6.6" y1="5.3" x2="-3.603" y2="5.3" width="0.254" layer="51"/>
+<wire x1="-3.603" y1="5.3" x2="3.603" y2="5.3" width="0.254" layer="51" curve="72.2"/>
+<wire x1="-6.6" y1="-5.3" x2="-4.778" y2="-5.3" width="0.254" layer="21"/>
+<wire x1="4.778" y1="-5.3" x2="6.6" y2="-5.3" width="0.254" layer="21"/>
+<wire x1="6.6" y1="5.3" x2="3.603" y2="5.3" width="0.254" layer="21"/>
+<wire x1="-3.603" y1="5.3" x2="-6.6" y2="5.3" width="0.254" layer="21"/>
+<wire x1="-3.603" y1="5.3" x2="3.603" y2="5.3" width="0.254" layer="21" curve="72.2"/>
+<wire x1="4.778" y1="-5.3" x2="-4.778" y2="-5.3" width="0.254" layer="21" curve="92.4"/>
+<wire x1="-6.6" y1="-5.3" x2="-6.6" y2="-1.95" width="0.254" layer="21"/>
+<wire x1="-6.6" y1="5.3" x2="-6.6" y2="1.95" width="0.254" layer="21"/>
+<wire x1="6.6" y1="5.3" x2="6.6" y2="1.95" width="0.254" layer="21"/>
+<wire x1="6.6" y1="-5.3" x2="6.6" y2="-1.95" width="0.254" layer="21"/>
+<circle x="-10.685" y="0.037" radius="0.08293125" width="0.254" layer="25"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FX135A-327">
+<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="0" y="0" length="middle"/>
+<pin name="2" x="20.32" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="SMTM1225">
+<wire x1="5.08" y1="2.54" x2="20.32" y2="2.54" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-5.08" x2="20.32" y2="2.54" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<text x="21.59" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="21.59" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="+_1" x="0" y="0" length="middle"/>
+<pin name="-" x="0" y="-2.54" length="middle"/>
+<pin name="+_2" x="25.4" y="0" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FX135A-327" prefix="Y">
+<description>&lt;b&gt;Crystal SMD 32.768kHz 1.5x3.2mm Crystal 32.768kHz, +/-20ppm, 2-Pin SMD, 3.2 x 1.5 x 0.9mm&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.foxonline.com/pdfs/FX135.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="FX135A-327" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FX135">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="Crystal SMD 32.768kHz 1.5x3.2mm Crystal 32.768kHz, +/-20ppm, 2-Pin SMD, 3.2 x 1.5 x 0.9mm" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Fox" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="FX135A-327" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="559-FX135A-327" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=559-FX135A-327" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="6480200P" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/6480200P" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMTM1225" prefix="U">
+<description>&lt;b&gt;Coin Cell Battery Holders SMT HOLDER FOR CR1225&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.mouser.com/ds/2/346/3.9226.4-3_SMTM1225-258011.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="SMTM1225" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMTM1225">
+<connects>
+<connect gate="G$1" pin="+_1" pad="1"/>
+<connect gate="G$1" pin="+_2" pad="3"/>
+<connect gate="G$1" pin="-" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="Coin Cell Battery Holders SMT HOLDER FOR CR1225" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="RENATA" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="SMTM1225" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="614-SMTM1225" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=614-SMTM1225" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -10819,6 +10946,8 @@ Source: www.kingbright.com</description>
 <part name="LED_12V1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="SML0805" package3d_urn="urn:adsk.eagle:package:15830/1"/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="JP5" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1Q" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
+<part name="Y1" library="SamacSys_Parts" deviceset="FX135A-327" device=""/>
+<part name="U5" library="SamacSys_Parts" deviceset="SMTM1225" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10963,6 +11092,14 @@ Source: www.kingbright.com</description>
 <attribute name="NAME" x="-12.7" y="2.54" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-5.715" y="2.54" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="Y1" gate="G$1" x="17.78" y="167.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="10.16" y="184.15" size="1.778" layer="95" rot="R90" align="center-left"/>
+<attribute name="VALUE" x="12.7" y="184.15" size="1.778" layer="96" rot="R90" align="center-left"/>
+</instance>
+<instance part="U5" gate="G$1" x="66.04" y="147.32" smashed="yes">
+<attribute name="NAME" x="87.63" y="154.94" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="87.63" y="152.4" size="1.778" layer="96" align="center-left"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11027,8 +11164,14 @@ Source: www.kingbright.com</description>
 <segment>
 <pinref part="U$2" gate="G$1" pin="VSS"/>
 <wire x1="66.04" y1="165.1" x2="53.34" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="165.1" x2="53.34" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="165.1" x2="53.34" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="53.34" y1="162.56" x2="53.34" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="162.56" x2="60.96" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="162.56" x2="60.96" y2="144.78" width="0.1524" layer="91"/>
+<junction x="53.34" y="162.56"/>
+<pinref part="U5" gate="G$1" pin="-"/>
+<wire x1="60.96" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
@@ -11324,6 +11467,34 @@ Source: www.kingbright.com</description>
 <wire x1="-10.16" y1="15.24" x2="-10.16" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="VIN"/>
 <wire x1="-10.16" y1="17.78" x2="-5.08" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="Y1" gate="G$1" pin="2"/>
+<wire x1="17.78" y1="187.96" x2="66.04" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="OSC1"/>
+<wire x1="66.04" y1="187.96" x2="66.04" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="Y1" gate="G$1" pin="1"/>
+<wire x1="17.78" y1="167.64" x2="45.72" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="167.64" x2="45.72" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="OSC2"/>
+<wire x1="45.72" y1="175.26" x2="66.04" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="+_1"/>
+<wire x1="66.04" y1="147.32" x2="43.18" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="147.32" x2="43.18" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="165.1" x2="50.8" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="165.1" x2="50.8" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="VBAT"/>
+<wire x1="50.8" y1="170.18" x2="66.04" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
