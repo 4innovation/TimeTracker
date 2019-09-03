@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1816,6 +1816,25 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0093.pdf</description>
 <wire x1="-1.5" y1="0.75" x2="-0.75" y2="1.5" width="0.1" layer="51"/>
 <circle x="-1.875" y="1.725" radius="0.125" width="0.25" layer="25"/>
 </package>
+<package name="ST-SOT-89">
+<description>&lt;b&gt;ST-SOT-89&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.5" y="-1.475" dx="1.4" dy="0.57" layer="1" rot="R90"/>
+<smd name="2" x="0" y="-1.575" dx="1.2" dy="0.65" layer="1" rot="R90"/>
+<smd name="3" x="1.5" y="-1.475" dx="1.4" dy="0.57" layer="1" rot="R90"/>
+<smd name="4" x="0" y="0.6" dx="3.15" dy="2" layer="1" rot="R90"/>
+<text x="-0.313" y="1.407" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.313" y="1.407" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2.25" y1="1.2" x2="2.25" y2="1.2" width="0.2" layer="51"/>
+<wire x1="2.25" y1="1.2" x2="2.25" y2="-1.2" width="0.2" layer="51"/>
+<wire x1="2.25" y1="-1.2" x2="-2.25" y2="-1.2" width="0.2" layer="51"/>
+<wire x1="-2.25" y1="-1.2" x2="-2.25" y2="1.2" width="0.2" layer="51"/>
+<wire x1="-2.25" y1="-1.2" x2="-2.25" y2="1.2" width="0.2" layer="21"/>
+<wire x1="2.25" y1="1.2" x2="2.25" y2="-1.2" width="0.2" layer="21"/>
+<wire x1="-2.25" y1="1.2" x2="-1.373" y2="1.2" width="0.2" layer="21"/>
+<wire x1="2.25" y1="1.2" x2="1.373" y2="1.2" width="0.2" layer="21"/>
+<circle x="-1.51" y="-2.558" radius="0.016" width="0.2" layer="25"/>
+</package>
 </packages>
 </library>
 <library name="SparkFun-Connectors">
@@ -2465,6 +2484,20 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="58.42" y="76.2" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="57.15" y="73.66" size="1.27" layer="27"/>
 </element>
+<element name="IC1" library="SamacSys_Parts" package="ST-SOT-89" value="L78L33ABUTR" x="-16.51" y="-13.97" smashed="yes">
+<attribute name="ALLIED_NUMBER" value="70390115" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="ALLIED_PRICE-STOCK" value="http://www.alliedelec.com/stmicroelectronics-l78l33abutr/70390115/" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="L78L33ABUTR, Voltage Regulator, 0.1A 3.3 V, 4-Pin SOT-89" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="STMicroelectronics" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="L78L33ABUTR" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="511-L78L33ABU-TR" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=511-L78L33ABU-TR" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-16.823" y="-12.563" size="1.27" layer="25" align="center"/>
+<attribute name="RS_PART_NUMBER" value="6869464P" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/6869464P" x="-16.51" y="-13.97" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-16.823" y="-12.563" size="1.27" layer="27" align="center"/>
+</element>
 </elements>
 <signals>
 <signal name="3V3">
@@ -2633,9 +2666,38 @@ design rules under a new name.</description>
 <wire x1="64.6267125" y1="11.43" x2="63.5" y2="11.43" width="0.1524" layer="1"/>
 <wire x1="64.9553125" y1="11.1014" x2="64.6267125" y2="11.43" width="0.1524" layer="1"/>
 <contactref element="C8" pad="2"/>
+<contactref element="IC1" pad="2"/>
+<wire x1="59.37" y1="76.2" x2="77.47" y2="69.85" width="0" layer="19" extent="1-1"/>
+<wire x1="58.125" y1="65.2" x2="59.37" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="44.45" y1="72.39" x2="59.37" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="25.146" y1="63.439" x2="44.45" y2="72.39" width="0" layer="19" extent="1-1"/>
+<wire x1="20.574" y1="63.439" x2="25.146" y2="63.439" width="0" layer="19" extent="1-1"/>
+<wire x1="12.446" y1="67.117" x2="20.574" y2="63.439" width="0" layer="19" extent="1-1"/>
+<wire x1="7.874" y1="67.117" x2="12.446" y2="67.117" width="0" layer="19" extent="1-1"/>
+<wire x1="5.89" y1="74.93" x2="7.874" y2="67.117" width="0" layer="19" extent="1-1"/>
+<wire x1="1.27" y1="59.91" x2="7.874" y2="67.117" width="0" layer="19" extent="1-1"/>
+<wire x1="10.16" y1="55.92" x2="1.27" y2="59.91" width="0" layer="19" extent="1-1"/>
+<wire x1="22.86" y1="74.89" x2="25.146" y2="63.439" width="0" layer="19" extent="1-1"/>
+<wire x1="54.61" y1="29.21" x2="58.125" y2="65.2" width="0" layer="19" extent="1-1"/>
+<wire x1="64.77" y1="18.73" x2="54.61" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="64.6267125" y1="11.43" x2="64.77" y2="18.73" width="0" layer="19" extent="1-1"/>
+<wire x1="71.335" y1="12.319" x2="65.475" y2="11.03" width="0" layer="19" extent="1-1"/>
+<wire x1="73.2028" y1="6.35" x2="71.335" y2="12.319" width="0" layer="19" extent="1-1"/>
+<wire x1="79.5528" y1="6.35" x2="73.2028" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="54.93" y1="10.16" x2="61.525" y2="11.83" width="0" layer="19" extent="1-1"/>
+<wire x1="91.26" y1="8.89" x2="79.5528" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="97.47" y1="11.43" x2="91.26" y2="8.89" width="0" layer="19" extent="1-1"/>
+<wire x1="39.37" y1="24.13" x2="54.61" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="34.6202" y1="22.1234" x2="39.37" y2="24.13" width="0" layer="19" extent="1-1"/>
+<wire x1="28.1178" y1="22.1234" x2="34.6202" y2="22.1234" width="0" layer="19" extent="1-1"/>
+<wire x1="35.523" y1="15.57" x2="34.6202" y2="22.1234" width="0" layer="19" extent="1-1"/>
+<wire x1="35.523" y1="9.22" x2="35.523" y2="15.57" width="0" layer="19" extent="1-1"/>
+<wire x1="26.633" y1="15.57" x2="28.1178" y2="22.1234" width="0" layer="19" extent="1-1"/>
+<wire x1="26.633" y1="9.22" x2="26.633" y2="15.57" width="0" layer="19" extent="1-1"/>
+<wire x1="18.68" y1="5.77" x2="26.633" y2="9.22" width="0" layer="19" extent="1-1"/>
+<wire x1="8.52" y1="9.42" x2="18.68" y2="5.77" width="0" layer="19" extent="1-1"/>
 <wire x1="5.53" y1="6.77" x2="8.52" y2="9.42" width="0" layer="19" extent="1-1"/>
-<wire x1="26.633" y1="9.22" x2="18.68" y2="5.77" width="0" layer="19" extent="1-1"/>
-<wire x1="91.26" y1="8.89" x2="97.47" y2="11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="-16.51" y1="-15.545" x2="5.53" y2="6.77" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFID_RESET">
 <contactref element="JP1" pad="7"/>
@@ -3111,6 +3173,9 @@ design rules under a new name.</description>
 <wire x1="53.34" y1="31.75" x2="54.61" y2="31.75" width="0.1524" layer="16"/>
 <wire x1="35.853" y1="6.35" x2="38.989" y2="6.35" width="0.1524" layer="1"/>
 <wire x1="38.989" y1="6.35" x2="40.259" y2="7.62" width="0.1524" layer="1"/>
+</signal>
+<signal name="GND_(TAB)">
+<contactref element="IC1" pad="4"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

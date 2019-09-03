@@ -1776,6 +1776,25 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0093.pdf</description>
 </package3d>
 </packages3d>
 </library>
+<library name="SamacSys_Parts">
+<description>&lt;b&gt;https://eagle.componentsearchengine.com&lt;/b&gt;&lt;p&gt;&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="FX135">
+<description>&lt;b&gt;FX135&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+<smd name="2" x="1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+<text x="-0.357" y="0.08" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.357" y="0.08" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.6" y1="0.75" x2="1.6" y2="0.75" width="0.2" layer="51"/>
+<wire x1="1.6" y1="0.75" x2="1.6" y2="-0.75" width="0.2" layer="51"/>
+<wire x1="1.6" y1="-0.75" x2="-1.6" y2="-0.75" width="0.2" layer="51"/>
+<wire x1="-1.6" y1="-0.75" x2="-1.6" y2="0.75" width="0.2" layer="51"/>
+<wire x1="-0.4" y1="0.75" x2="0.4" y2="0.75" width="0.2" layer="21"/>
+<wire x1="-0.4" y1="-0.75" x2="0.4" y2="-0.75" width="0.2" layer="21"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2077,6 +2096,18 @@ design rules under a new name.</description>
 <attribute name="NAME" x="35.56" y="20.701" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="35.56" y="16.129" size="1.27" layer="27" ratio="10"/>
 </element>
+<element name="Y1" library="SamacSys_Parts" package="FX135" value="FX135A-327" x="-10.16" y="-12.7" smashed="yes">
+<attribute name="DESCRIPTION" value="Crystal SMD 32.768kHz 1.5x3.2mm Crystal 32.768kHz, +/-20ppm, 2-Pin SMD, 3.2 x 1.5 x 0.9mm" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Fox" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="FX135A-327" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="559-FX135A-327" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=559-FX135A-327" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-10.517" y="-12.62" size="1.27" layer="25" align="center"/>
+<attribute name="RS_PART_NUMBER" value="6480200P" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/6480200P" x="-10.16" y="-12.7" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-10.517" y="-12.62" size="1.27" layer="27" align="center"/>
+</element>
 </elements>
 <signals>
 <signal name="3V3">
@@ -2255,6 +2286,16 @@ design rules under a new name.</description>
 <wire x1="52.959" y1="58.42" x2="52.959" y2="20.32" width="0.1524" layer="1"/>
 <wire x1="52.959" y1="20.32" x2="41.021" y2="20.32" width="0.1524" layer="1"/>
 <wire x1="41.021" y1="20.32" x2="41.021" y2="58.42" width="0.1524" layer="1"/>
+</signal>
+<signal name="N$14">
+<contactref element="Y1" pad="2"/>
+<contactref element="U$2" pad="1"/>
+<wire x1="-8.91" y1="-12.7" x2="19.48" y2="50.505" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$15">
+<contactref element="Y1" pad="1"/>
+<contactref element="U$2" pad="2"/>
+<wire x1="-11.41" y1="-12.7" x2="19.48" y2="49.855" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
