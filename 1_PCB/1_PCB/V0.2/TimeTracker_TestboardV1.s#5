@@ -11128,6 +11128,42 @@ Source: www.kingbright.com</description>
 <wire x1="2.25" y1="1.2" x2="1.373" y2="1.2" width="0.2" layer="21"/>
 <circle x="-1.51" y="-2.558" radius="0.016" width="0.2" layer="25"/>
 </package>
+<package name="SOIC127P1032X265-16N">
+<description>&lt;b&gt;SOT162-1&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-4.725" y="4.445" dx="1.95" dy="0.7" layer="1"/>
+<smd name="2" x="-4.725" y="3.175" dx="1.95" dy="0.7" layer="1"/>
+<smd name="3" x="-4.725" y="1.905" dx="1.95" dy="0.7" layer="1"/>
+<smd name="4" x="-4.725" y="0.635" dx="1.95" dy="0.7" layer="1"/>
+<smd name="5" x="-4.725" y="-0.635" dx="1.95" dy="0.7" layer="1"/>
+<smd name="6" x="-4.725" y="-1.905" dx="1.95" dy="0.7" layer="1"/>
+<smd name="7" x="-4.725" y="-3.175" dx="1.95" dy="0.7" layer="1"/>
+<smd name="8" x="-4.725" y="-4.445" dx="1.95" dy="0.7" layer="1"/>
+<smd name="9" x="4.725" y="-4.445" dx="1.95" dy="0.7" layer="1"/>
+<smd name="10" x="4.725" y="-3.175" dx="1.95" dy="0.7" layer="1"/>
+<smd name="11" x="4.725" y="-1.905" dx="1.95" dy="0.7" layer="1"/>
+<smd name="12" x="4.725" y="-0.635" dx="1.95" dy="0.7" layer="1"/>
+<smd name="13" x="4.725" y="0.635" dx="1.95" dy="0.7" layer="1"/>
+<smd name="14" x="4.725" y="1.905" dx="1.95" dy="0.7" layer="1"/>
+<smd name="15" x="4.725" y="3.175" dx="1.95" dy="0.7" layer="1"/>
+<smd name="16" x="4.725" y="4.445" dx="1.95" dy="0.7" layer="1"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-5.95" y1="5.5" x2="5.95" y2="5.5" width="0.05" layer="51"/>
+<wire x1="5.95" y1="5.5" x2="5.95" y2="-5.5" width="0.05" layer="51"/>
+<wire x1="5.95" y1="-5.5" x2="-5.95" y2="-5.5" width="0.05" layer="51"/>
+<wire x1="-5.95" y1="-5.5" x2="-5.95" y2="5.5" width="0.05" layer="51"/>
+<wire x1="-3.75" y1="5.15" x2="3.75" y2="5.15" width="0.1" layer="51"/>
+<wire x1="3.75" y1="5.15" x2="3.75" y2="-5.15" width="0.1" layer="51"/>
+<wire x1="3.75" y1="-5.15" x2="-3.75" y2="-5.15" width="0.1" layer="51"/>
+<wire x1="-3.75" y1="-5.15" x2="-3.75" y2="5.15" width="0.1" layer="51"/>
+<wire x1="-3.75" y1="3.88" x2="-2.48" y2="5.15" width="0.1" layer="51"/>
+<wire x1="-3.4" y1="5.15" x2="3.4" y2="5.15" width="0.2" layer="21"/>
+<wire x1="3.4" y1="5.15" x2="3.4" y2="-5.15" width="0.2" layer="21"/>
+<wire x1="3.4" y1="-5.15" x2="-3.4" y2="-5.15" width="0.2" layer="21"/>
+<wire x1="-3.4" y1="-5.15" x2="-3.4" y2="5.15" width="0.2" layer="21"/>
+<wire x1="-5.7" y1="5.145" x2="-3.75" y2="5.145" width="0.2" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="FX135A-327">
@@ -11177,6 +11213,30 @@ Source: www.kingbright.com</description>
 <pin name="GND" x="0" y="-2.54" length="middle" direction="pwr"/>
 <pin name="VIN" x="35.56" y="0" length="middle" direction="in" rot="R180"/>
 <pin name="GND_(TAB)" x="35.56" y="-2.54" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+<symbol name="PCF8574T_3,518">
+<wire x1="5.08" y1="2.54" x2="22.86" y2="2.54" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-20.32" x2="22.86" y2="2.54" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-20.32" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<text x="24.13" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="24.13" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="A0" x="0" y="0" length="middle"/>
+<pin name="A1" x="0" y="-2.54" length="middle"/>
+<pin name="A2" x="0" y="-5.08" length="middle"/>
+<pin name="P0" x="0" y="-7.62" length="middle"/>
+<pin name="P1" x="0" y="-10.16" length="middle"/>
+<pin name="P2" x="0" y="-12.7" length="middle"/>
+<pin name="P3" x="0" y="-15.24" length="middle"/>
+<pin name="VSS" x="0" y="-17.78" length="middle"/>
+<pin name="VDD" x="27.94" y="0" length="middle" rot="R180"/>
+<pin name="SDA" x="27.94" y="-2.54" length="middle" rot="R180"/>
+<pin name="SCL" x="27.94" y="-5.08" length="middle" rot="R180"/>
+<pin name="!INT" x="27.94" y="-7.62" length="middle" rot="R180"/>
+<pin name="P7" x="27.94" y="-10.16" length="middle" rot="R180"/>
+<pin name="P6" x="27.94" y="-12.7" length="middle" rot="R180"/>
+<pin name="P5" x="27.94" y="-15.24" length="middle" rot="R180"/>
+<pin name="P4" x="27.94" y="-17.78" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -11293,6 +11353,47 @@ Source: &lt;a href="http://www.st.com/web/en/resource/technical/document/datashe
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=511-L78L33ABU-TR" constant="no"/>
 <attribute name="RS_PART_NUMBER" value="6869464P" constant="no"/>
 <attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/6869464P" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PCF8574T_3,518" prefix="IC">
+<description>&lt;b&gt;NXP - PCF8574T/3,518 - IC, I/O EXPANDER, 8BIT, SOIC16&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://www.nxp.com/docs/en/data-sheet/PCF8574_PCF8574A.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="PCF8574T_3,518" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC127P1032X265-16N">
+<connects>
+<connect gate="G$1" pin="!INT" pad="13"/>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="P0" pad="4"/>
+<connect gate="G$1" pin="P1" pad="5"/>
+<connect gate="G$1" pin="P2" pad="6"/>
+<connect gate="G$1" pin="P3" pad="7"/>
+<connect gate="G$1" pin="P4" pad="9"/>
+<connect gate="G$1" pin="P5" pad="10"/>
+<connect gate="G$1" pin="P6" pad="11"/>
+<connect gate="G$1" pin="P7" pad="12"/>
+<connect gate="G$1" pin="SCL" pad="14"/>
+<connect gate="G$1" pin="SDA" pad="15"/>
+<connect gate="G$1" pin="VDD" pad="16"/>
+<connect gate="G$1" pin="VSS" pad="8"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="NXP - PCF8574T/3,518 - IC, I/O EXPANDER, 8BIT, SOIC16" constant="no"/>
+<attribute name="HEIGHT" value="2.65mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Nexperia" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="PCF8574T/3,518" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="771-PCF8574TD-T" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=771-PCF8574TD-T" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -11874,6 +11975,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="IC1" library="SamacSys_Parts" deviceset="L78L33ABUTR" device=""/>
+<part name="IC3" library="SamacSys_Parts" deviceset="PCF8574T_3,518" device=""/>
+<part name="IC4" library="SamacSys_Parts" deviceset="PCF8574T_3,518" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12152,6 +12255,14 @@ on unused CMOS inputs</text>
 <instance part="IC1" gate="G$1" x="-193.04" y="220.98" smashed="yes">
 <attribute name="NAME" x="-161.29" y="228.6" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="-161.29" y="226.06" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="IC3" gate="G$1" x="309.88" y="160.02" smashed="yes">
+<attribute name="NAME" x="334.01" y="167.64" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="334.01" y="165.1" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="IC4" gate="G$1" x="309.88" y="124.46" smashed="yes">
+<attribute name="NAME" x="334.01" y="132.08" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="334.01" y="129.54" size="1.778" layer="96" align="center-left"/>
 </instance>
 </instances>
 <busses>

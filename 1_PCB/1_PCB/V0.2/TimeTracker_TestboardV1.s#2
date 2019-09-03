@@ -11694,7 +11694,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="560"/>
 <part name="LED_12V1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="SML0805" package3d_urn="urn:adsk.eagle:package:15830/1"/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="JP5" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1Q" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
+<part name="VCC_µC" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1Q" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
 <part name="Y1" library="SamacSys_Parts" deviceset="FX135A-327" device=""/>
 <part name="U5" library="SamacSys_Parts" deviceset="SMTM1225" device=""/>
 <part name="HM1" library="SamacSys_Parts" deviceset="SI7021-A20" device=""/>
@@ -11731,6 +11731,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2"/>
 <part name="JP7" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X7" device="" package3d_urn="urn:adsk.eagle:package:22477/2"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="VCC_µC1" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1Q" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -11865,7 +11866,7 @@ on unused CMOS inputs</text>
 <instance part="GND36" gate="1" x="-200.66" y="144.78" smashed="yes">
 <attribute name="VALUE" x="-203.2" y="142.24" size="1.778" layer="96"/>
 </instance>
-<instance part="JP5" gate="A" x="-25.4" y="30.48" smashed="yes">
+<instance part="VCC_µC" gate="A" x="-25.4" y="30.48" smashed="yes">
 <attribute name="NAME" x="-27.94" y="25.4" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-20.955" y="25.4" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -12002,6 +12003,10 @@ on unused CMOS inputs</text>
 </instance>
 <instance part="GND4" gate="1" x="144.78" y="119.38" smashed="yes">
 <attribute name="VALUE" x="142.24" y="116.84" size="1.778" layer="96"/>
+</instance>
+<instance part="VCC_µC1" gate="A" x="-71.12" y="43.18" smashed="yes">
+<attribute name="NAME" x="-73.66" y="38.1" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-66.675" y="38.1" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -12222,6 +12227,12 @@ on unused CMOS inputs</text>
 <wire x1="-58.42" y1="45.72" x2="-58.42" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-58.42" y1="43.18" x2="-35.56" y2="43.18" width="0.1524" layer="91"/>
 <junction x="-35.56" y="43.18"/>
+<pinref part="VCC_µC1" gate="A" pin="1"/>
+<wire x1="-71.12" y1="35.56" x2="-71.12" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="33.02" x2="-60.96" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="33.02" x2="-60.96" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="43.18" x2="-58.42" y2="43.18" width="0.1524" layer="91"/>
+<junction x="-58.42" y="43.18"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND2"/>
@@ -12479,7 +12490,7 @@ on unused CMOS inputs</text>
 <junction x="-111.76" y="132.08"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="A" pin="1"/>
+<pinref part="VCC_µC" gate="A" pin="1"/>
 <wire x1="-25.4" y1="22.86" x2="-25.4" y2="20.32" width="0.1524" layer="91"/>
 <label x="-25.4" y="20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12518,9 +12529,15 @@ on unused CMOS inputs</text>
 <pinref part="RESET1" gate="1" pin="S1"/>
 <pinref part="U$1" gate="G$1" pin="RST"/>
 <wire x1="-38.1" y1="45.72" x2="-33.02" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="45.72" x2="-20.32" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="45.72" x2="-27.94" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="45.72" x2="-20.32" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="48.26" x2="-33.02" y2="45.72" width="0.1524" layer="91"/>
 <junction x="-33.02" y="45.72"/>
+<pinref part="VCC_µC1" gate="A" pin="2"/>
+<wire x1="-71.12" y1="50.8" x2="-71.12" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="53.34" x2="-27.94" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="53.34" x2="-27.94" y2="45.72" width="0.1524" layer="91"/>
+<junction x="-27.94" y="45.72"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -12532,7 +12549,7 @@ on unused CMOS inputs</text>
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="JP5" gate="A" pin="2"/>
+<pinref part="VCC_µC" gate="A" pin="2"/>
 <wire x1="-25.4" y1="38.1" x2="-25.4" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="VIN"/>
 <wire x1="-25.4" y1="40.64" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>

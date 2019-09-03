@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11109,6 +11109,25 @@ Source: www.kingbright.com</description>
 <wire x1="-1.5" y1="0.75" x2="-0.75" y2="1.5" width="0.1" layer="51"/>
 <circle x="-1.875" y="1.725" radius="0.125" width="0.25" layer="25"/>
 </package>
+<package name="ST-SOT-89">
+<description>&lt;b&gt;ST-SOT-89&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.5" y="-1.475" dx="1.4" dy="0.57" layer="1" rot="R90"/>
+<smd name="2" x="0" y="-1.575" dx="1.2" dy="0.65" layer="1" rot="R90"/>
+<smd name="3" x="1.5" y="-1.475" dx="1.4" dy="0.57" layer="1" rot="R90"/>
+<smd name="4" x="0" y="0.6" dx="3.15" dy="2" layer="1" rot="R90"/>
+<text x="-0.313" y="1.407" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.313" y="1.407" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2.25" y1="1.2" x2="2.25" y2="1.2" width="0.2" layer="51"/>
+<wire x1="2.25" y1="1.2" x2="2.25" y2="-1.2" width="0.2" layer="51"/>
+<wire x1="2.25" y1="-1.2" x2="-2.25" y2="-1.2" width="0.2" layer="51"/>
+<wire x1="-2.25" y1="-1.2" x2="-2.25" y2="1.2" width="0.2" layer="51"/>
+<wire x1="-2.25" y1="-1.2" x2="-2.25" y2="1.2" width="0.2" layer="21"/>
+<wire x1="2.25" y1="1.2" x2="2.25" y2="-1.2" width="0.2" layer="21"/>
+<wire x1="-2.25" y1="1.2" x2="-1.373" y2="1.2" width="0.2" layer="21"/>
+<wire x1="2.25" y1="1.2" x2="1.373" y2="1.2" width="0.2" layer="21"/>
+<circle x="-1.51" y="-2.558" radius="0.016" width="0.2" layer="25"/>
+</package>
 </packages>
 <symbols>
 <symbol name="FX135A-327">
@@ -11146,6 +11165,18 @@ Source: www.kingbright.com</description>
 <pin name="SCL" x="30.48" y="0" length="middle" rot="R180"/>
 <pin name="VDD" x="30.48" y="-2.54" length="middle" direction="pwr" rot="R180"/>
 <pin name="DNC_2" x="30.48" y="-5.08" length="middle" rot="R180"/>
+</symbol>
+<symbol name="L78L33ABUTR">
+<wire x1="5.08" y1="2.54" x2="30.48" y2="2.54" width="0.254" layer="94"/>
+<wire x1="30.48" y1="-5.08" x2="30.48" y2="2.54" width="0.254" layer="94"/>
+<wire x1="30.48" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<text x="31.75" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="31.75" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="VOUT" x="0" y="0" length="middle" direction="out"/>
+<pin name="GND" x="0" y="-2.54" length="middle" direction="pwr"/>
+<pin name="VIN" x="35.56" y="0" length="middle" direction="in" rot="R180"/>
+<pin name="GND_(TAB)" x="35.56" y="-2.54" length="middle" direction="pwr" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -11231,6 +11262,37 @@ Source: &lt;a href="https://www.silabs.com/Support Documents/TechnicalDocs/Si702
 <attribute name="MOUSER_PRICE-STOCK" value="" constant="no"/>
 <attribute name="RS_PART_NUMBER" value="" constant="no"/>
 <attribute name="RS_PRICE-STOCK" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="L78L33ABUTR" prefix="IC">
+<description>&lt;b&gt;L78L33ABUTR, Voltage Regulator, 0.1A 3.3 V, 4-Pin SOT-89&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.st.com/web/en/resource/technical/document/datasheet/CD00000446.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="L78L33ABUTR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ST-SOT-89">
+<connects>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="GND_(TAB)" pad="4"/>
+<connect gate="G$1" pin="VIN" pad="3"/>
+<connect gate="G$1" pin="VOUT" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="ALLIED_NUMBER" value="70390115" constant="no"/>
+<attribute name="ALLIED_PRICE-STOCK" value="http://www.alliedelec.com/stmicroelectronics-l78l33abutr/70390115/" constant="no"/>
+<attribute name="DESCRIPTION" value="L78L33ABUTR, Voltage Regulator, 0.1A 3.3 V, 4-Pin SOT-89" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="STMicroelectronics" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="L78L33ABUTR" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="511-L78L33ABU-TR" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=511-L78L33ABU-TR" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="6869464P" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/6869464P" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -11811,6 +11873,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10K"/>
 <part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="IC1" library="SamacSys_Parts" deviceset="L78L33ABUTR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12085,6 +12148,10 @@ on unused CMOS inputs</text>
 </instance>
 <instance part="GND20" gate="1" x="139.7" y="165.1" smashed="yes">
 <attribute name="VALUE" x="137.16" y="162.56" size="1.778" layer="96"/>
+</instance>
+<instance part="IC1" gate="G$1" x="-193.04" y="220.98" smashed="yes">
+<attribute name="NAME" x="-161.29" y="228.6" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-161.29" y="226.06" size="1.778" layer="96" align="center-left"/>
 </instance>
 </instances>
 <busses>
