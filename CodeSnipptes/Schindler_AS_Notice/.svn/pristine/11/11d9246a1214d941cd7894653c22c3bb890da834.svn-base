@@ -1,0 +1,226 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Drawing;
+using System.IO;
+using FTP;
+
+namespace Schindler_AS_Notice
+{
+    public partial class Main : Form
+    {
+        private String connectionString = null;
+        private SqlConnection sqlConnection = null;
+        private SqlDataAdapter sqlDataAdapter = null;
+        private SqlCommandBuilder sqlCommandBuilder = null;
+        private DataTable dataTable = null;
+        private BindingSource bindingSource = null;
+        private String selectQueryString = null;
+
+        public Main()
+        {
+            InitializeComponent();
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                connectionString = Encryption.DecryptString(ConfigurationManager.AppSettings["connectionString"].ToString(),"g%_i3hw%&73)_Tr80?1");
+                sqlConnection = new SqlConnection(connectionString);
+                selectQueryString = "SELECT ID,Datum,Thema,Bemerkung_Einzelfrage_Problem,Korrekturmaßnahme_Vorschlag,Rückfragen_Verantwortlicher,Verantwortlicher,Termin,Status,Verknüpfte_Dokumente,Autor FROM Notice";
+
+                sqlConnection.Open();
+
+                sqlDataAdapter = new SqlDataAdapter(selectQueryString, sqlConnection);
+                sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+
+                dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                bindingSource = new BindingSource();
+                bindingSource.DataSource = dataTable;
+
+                dataGridView1.DataSource = bindingSource;
+
+                dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                sqlDataAdapter.Update(dataTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            sqlConnection.Close();
+            Application.Exit();
+        }
+
+        private void btnSaveClick(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlDataAdapter.Update(dataTable);
+
+                btnUpdate_Click_1(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Der Datensatz den Sie anpassen wollen, wurde bereits geändert, bitte führen Sie ein Update durch.", "Hinweis");
+            }
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            Update();
+        }
+
+        private void Update()
+        {
+            try
+            {
+                sqlConnection.Close();
+
+                connectionString = Encryption.DecryptString(ConfigurationManager.AppSettings["connectionString"].ToString(), "g%_i3hw%&73)_Tr80?1");
+                sqlConnection = new SqlConnection(connectionString);
+                selectQueryString = "SELECT ID,Datum,Thema,Bemerkung_Einzelfrage_Problem,Korrekturmaßnahme_Vorschlag,Rückfragen_Verantwortlicher,Verantwortlicher,Termin,Status,Verknüpfte_Dokumente,Autor FROM Notice";
+
+                sqlConnection.Open();
+
+                sqlDataAdapter = new SqlDataAdapter(selectQueryString, sqlConnection);
+                sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+
+                dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                bindingSource = new BindingSource();
+                bindingSource.DataSource = dataTable;
+
+                dataGridView1.DataSource = bindingSource;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            //try
+            //{               
+            //    foreach (DataGridViewRow r in dataGridView1.Rows)
+            //    {
+            //        if (System.Uri.IsWellFormedUriString(r.Cells["Verknüpfte_Dokumente"].Value.ToString(), UriKind.Absolute))
+            //        {
+            //            r.Cells["Verknüpfte_Dokumente"] = new DataGridViewLinkCell();
+            //            // Note that if I want a different link colour for example it must go here
+            //            DataGridViewLinkCell c = r.Cells["Verknüpfte_Dokumente"] as DataGridViewLinkCell;
+            //            c.LinkColor = Color.Green;
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+        }
+
+        private void dataGridView1_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 8)
+            {
+                this.Cursor = Cursors.Hand;
+            }
+        }
+
+        private void dataGridView1_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 8)
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 8)
+            {
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() != "")
+                {
+                    if (File.Exists(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()) || Directory.Exists(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()))
+                    {
+                        Question question = new Question(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value as string);
+
+                        question.ShowDialog();
+                    }
+                }
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+            }
+            if (e.ColumnIndex != 8)
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private void btn_processSchindler_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"F:\software\TABLEAU\Schindler_AS\Ablauf\Prozess_AS-Schindler.png");
+        }
+
+        private void dataGridView1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyValue == (char)Keys.F3)
+            {
+                if (dataGridView1.CurrentCell.ColumnIndex == 8)
+                {
+                    // Show the dialog and get result.
+                    DialogResult result = openFileDialog1.ShowDialog();
+                    if (result == DialogResult.OK) // Test result.
+                    {
+                        dataGridView1.CurrentCell.Value = openFileDialog1.FileName;
+                    }
+                }
+            }
+        }
+
+    }
+}
