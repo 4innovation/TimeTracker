@@ -16,7 +16,19 @@ namespace TimeTracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Log_In());
+
+            Log_In LogIn = new Log_In();
+            LogIn.ShowDialog();
+            //Application.Run(LogIn);
+ 
+
+            if (LogIn.HandleVariable())
+            {
+                TimeTrackerGUI GUI = new TimeTrackerGUI();
+                Application.Run(GUI);
+            }
+             
+            // if(LogIn.PW)
         }
     }
 }

@@ -11,8 +11,12 @@ using System.Threading;
 
 namespace TimeTracker
 {
+    
+
     public partial class Log_In : Form
     {
+        bool _PWCorrect = false;
+
         public Log_In()
         {
             InitializeComponent();
@@ -50,15 +54,14 @@ namespace TimeTracker
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-
-
             if (textBox1.Text == "Admin" && textBox2.Text == "sicher")
             {
-                TimeTrackerGUI main = new TimeTrackerGUI();
+                //TimeTrackerGUI main = new TimeTrackerGUI();
 
-                this.Hide();
+                _PWCorrect = true;
+                HandleVariable();
 
-                main.ShowDialog();
+                //main.ShowDialog();
             }
             else
             {
@@ -69,6 +72,19 @@ namespace TimeTracker
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public bool HandleVariable()
+        {
+            if (_PWCorrect)
+            {
+                this.Hide();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }
