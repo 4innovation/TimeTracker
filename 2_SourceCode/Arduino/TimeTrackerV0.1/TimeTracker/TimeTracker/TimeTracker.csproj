@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SerialPortManager.cs" />
     <Compile Include="Log In.cs">
       <SubType>Form</SubType>
     </Compile>
