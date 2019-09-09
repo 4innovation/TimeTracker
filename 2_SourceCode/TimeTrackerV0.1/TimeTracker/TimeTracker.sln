@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker", "TimeTracker\TimeTracker.csproj", "{E480495F-1A5F-460A-94DB-B22ADADADC8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{440B66D8-2847-4E51-B469-260660637529}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\CodeSnipptes\Schindler_AS_Notice\Schindler_AS_Notice\Login.cs = ..\..\..\CodeSnipptes\Schindler_AS_Notice\Schindler_AS_Notice\Login.cs
+		..\..\..\CodeSnipptes\Schindler_AS_Notice\Schindler_AS_Notice\Login.Designer.cs = ..\..\..\CodeSnipptes\Schindler_AS_Notice\Schindler_AS_Notice\Login.Designer.cs
+		..\..\..\CodeSnipptes\Schindler_AS_Notice\Schindler_AS_Notice\Login.resx = ..\..\..\CodeSnipptes\Schindler_AS_Notice\Schindler_AS_Notice\Login.resx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E480495F-1A5F-460A-94DB-B22ADADADC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E480495F-1A5F-460A-94DB-B22ADADADC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E480495F-1A5F-460A-94DB-B22ADADADC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E480495F-1A5F-460A-94DB-B22ADADADC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F053E3DB-AA2D-4C09-A38C-8ACA41C26496}
+	EndGlobalSection
+EndGlobal
