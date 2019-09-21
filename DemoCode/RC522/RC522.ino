@@ -119,7 +119,8 @@ void RFID_FirmwareVersion()
 
   snprintf(buf,30,"%s (0x%02x)",ver,v);
 
-  if((v == 0x00) || (v == 0xFF)) {
+  if((v == 0x00) || (v == 0xFF)) 
+  {
 
     Serial.println(F("WARNING: Communication failure, is the MFRC522 properly connected?"));
   }
@@ -133,6 +134,7 @@ void setup()
   mfrc522.PCD_Init();
   //mfrc522.PCD_SetAntennaGain(mfrc522.RxGain_max);
   RFID_FirmwareVersion();
+  mfrc522.PCD_SetRegisterBitMask(mfrc522.RFCfgReg, (0x07<<4));
 }
 
 int cardNo = 1;
@@ -140,15 +142,19 @@ unsigned long t = 0;
 
 void loop() 
 {
-  if( mfrc522.PICC_IsNewCardPresent() && mfrc522.PICC_ReadCardSerial() ) {
+  if( mfrc522.PICC_IsNewCardPresent() && mfrc522.PICC_ReadCardSerial() ) 
+  {
     
     RFID_PrintInfo(&(mfrc522.uid));
     cardNo++;
-  } else {
-    if(millis()-t<400) {
+  } else 
+  {
+    if(millis()-t<400) 
+    {
       snprintf(buf,30,"Scan card #%d",cardNo);
       
-    } else {
+    } else
+    {
       
     }
     if(millis()-t>800) t = millis();
