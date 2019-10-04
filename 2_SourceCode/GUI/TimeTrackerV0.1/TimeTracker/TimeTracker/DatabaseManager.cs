@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
 
-namespace AS_Template_Tool
+namespace TimeTracker
 {
     public class DatabaseManager
     {

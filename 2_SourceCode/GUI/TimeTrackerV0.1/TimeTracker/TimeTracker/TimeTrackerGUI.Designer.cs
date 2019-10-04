@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimeTrackerGUI));
             this.button1 = new System.Windows.Forms.Button();
             this.comPort = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -37,7 +36,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripDropDownButton_Admin = new System.Windows.Forms.ToolStripDropDownButton();
             this.benutzerverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -103,7 +102,7 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton_Admin});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1687, 25);
@@ -113,25 +112,24 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel1.Text = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(0, 22);
             // 
-            // toolStripDropDownButton1
+            // toolStripDropDownButton_Admin
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton_Admin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton_Admin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.benutzerverwaltungToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.ToolTipText = "Admin";
+            this.toolStripDropDownButton_Admin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton_Admin.Name = "toolStripDropDownButton_Admin";
+            this.toolStripDropDownButton_Admin.Size = new System.Drawing.Size(95, 22);
+            this.toolStripDropDownButton_Admin.Text = "AdminBereich";
+            this.toolStripDropDownButton_Admin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolStripDropDownButton_Admin.ToolTipText = "Admin";
             // 
             // benutzerverwaltungToolStripMenuItem
             // 
             this.benutzerverwaltungToolStripMenuItem.Name = "benutzerverwaltungToolStripMenuItem";
-            this.benutzerverwaltungToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.benutzerverwaltungToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.benutzerverwaltungToolStripMenuItem.Text = "Benutzerverwaltung";
             this.benutzerverwaltungToolStripMenuItem.Click += new System.EventHandler(this.benutzerverwaltungToolStripMenuItem_Click);
             // 
@@ -166,7 +164,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton_Admin;
         private System.Windows.Forms.ToolStripMenuItem benutzerverwaltungToolStripMenuItem;
     }
 }

@@ -15,11 +15,16 @@ namespace TimeTracker
     public partial class TimeTrackerGUI : Form
     {
         SerialPortManager _PortManager = new SerialPortManager();
+        string _UserRole = string.Empty;
+        string _UserName = string.Empty;
 
 
-
-        public TimeTrackerGUI()
+        // Konstruktor
+        public TimeTrackerGUI(string Role, string Username)
         {
+            this._UserName = Username;
+            this._UserRole = Role;
+
             InitializeComponent();
         }
 
@@ -30,11 +35,11 @@ namespace TimeTracker
                 while (true)
                 {
                     string ruck = _PortManager.Run();
-                    if(!String.IsNullOrEmpty(ruck))
+                    if (!String.IsNullOrEmpty(ruck))
                     {
                         listBox1.Items.Add(ruck);
                     }
-                   
+
                 }
                 //var msg =
             }
@@ -52,7 +57,8 @@ namespace TimeTracker
 
         private void benutzerverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // Neue Form
         }
+
     }
 }
