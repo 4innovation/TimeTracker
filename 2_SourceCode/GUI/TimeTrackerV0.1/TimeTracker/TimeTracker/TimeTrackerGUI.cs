@@ -49,5 +49,10 @@ namespace TimeTracker
                 comPort.Items.Add(s);
             }
         }
+
+        private void benutzerverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
