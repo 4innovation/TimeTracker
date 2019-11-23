@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseManager.cs" />
+    <Compile Include="GlobalFun.cs" />
     <Compile Include="SerialPortManager.cs" />
     <Compile Include="Log In.cs">
       <SubType>Form</SubType>

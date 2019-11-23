@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 //
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
 
@@ -24,25 +24,38 @@ namespace TimeTracker
 
         private void UserManagment_Load(object sender, EventArgs e)
         {
+            GlobalFun _global = new GlobalFun();
+
+            List<string> Line1 = new List<string>();
+
+            List<List<string>> LArray = new List<List<string>>();
+
+            Line1.Add("Test1"); Line1.Add("Test2"); Line1.Add("Test3");
+            LArray.Add(Line1);
+            LArray.Add(Line1);
 
 
-            DataTable dtbl = new DataTable();
 
 
-            //// nur als test später in Databasemanager klasse bauen
-             SQLiteConnection _connection = new SQLiteConnection();
+            _global.SetArray2DataGridView(dataGridViewUser, LArray);
+
+           //taTable dtbl = new DataTable();
 
 
-            _connection = new SQLiteConnection(@"C:\Users\Nicolas Wolf\Desktop\Nicos_Repos\TimeTracker\2_SourceCode\GUI\ac.db");
+            ////// nur als test später in Databasemanager klasse bauen
+            // SQLiteConnection _connection = new SQLiteConnection();
 
-            _connection.Open();
 
-            SQLiteCommand command = new SQLiteCommand(_connection);
-            command.CommandText = "select * from Users";
+            //_connection = new SQLiteConnection(@"C:\Users\Nicolas Wolf\Desktop\Nicos_Repos\TimeTracker\2_SourceCode\GUI\ac.db");
 
-            SQLiteDataReader reader = command.ExecuteReader();
+            //_connection.Open();
 
-            dtbl = reader
+            //SQLiteCommand command = new SQLiteCommand(_connection);
+            //command.CommandText = "select * from Users";
+
+            //SQLiteDataReader reader = command.ExecuteReader();
+
+            //dtbl = reader
 
 
 
