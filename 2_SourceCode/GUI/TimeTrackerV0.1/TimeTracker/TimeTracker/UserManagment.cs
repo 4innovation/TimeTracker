@@ -17,8 +17,12 @@ namespace TimeTracker
 {
     public partial class UserManagment : Form
     {
-        public UserManagment()
+        string _userDB = string.Empty;
+
+
+        public UserManagment(string UserDataBaseString)
         {
+            _userDB = UserDataBaseString;
             InitializeComponent();
         }
 
@@ -26,13 +30,7 @@ namespace TimeTracker
         {
             GlobalFun _global = new GlobalFun();
 
-            List<string> Line1 = new List<string>();
 
-            List<List<string>> LArray = new List<List<string>>();
-
-            Line1.Add("Test1"); Line1.Add("Test2"); Line1.Add("Test3");
-            LArray.Add(Line1);
-            LArray.Add(Line1);
 
 
 

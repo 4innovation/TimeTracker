@@ -362,6 +362,17 @@ namespace TimeTracker
         }
 
 
+        public List<List<string>> getAllEntries(string table)
+        {
+            List<List<string>> ReturnValue = new List<List<string>>();
+
+
+       
+
+            return ReturnValue;
+        }
+
+
 
     }
 }

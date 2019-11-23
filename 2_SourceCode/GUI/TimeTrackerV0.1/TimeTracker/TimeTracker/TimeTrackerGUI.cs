@@ -77,7 +77,7 @@ namespace TimeTracker
         {
             if(_UserRole == "Admin")
             {
-                UserManagment UsrMan = new UserManagment();
+                UserManagment UsrMan = new UserManagment(_DatabaseConnection);
                 UsrMan.ShowDialog();
             }
         }

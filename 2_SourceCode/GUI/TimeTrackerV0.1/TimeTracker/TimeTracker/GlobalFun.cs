@@ -20,11 +20,16 @@ namespace TimeTracker
         {
             DGV.Rows.Clear();
             DGV.RowHeadersVisible = VisibleHeadeer;
-            DGV.ColumnCount = LArray.Count();
+            DGV.ColumnCount = LArray[0].Count();
 
             for (int i = 0; i < LArray.Count(); i++)
             {
                 string[] row = new string[LArray[i].Count()];
+                for(int j = 0; j < LArray[i].Count; j++)
+                {
+                    row[j] = LArray[i][j];
+                }
+                DGV.Rows.Add(row);
             }
 
         }
