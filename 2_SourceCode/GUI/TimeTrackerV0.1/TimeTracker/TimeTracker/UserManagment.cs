@@ -17,18 +17,23 @@ namespace TimeTracker
 {
     public partial class UserManagment : Form
     {
-        string _userDB = string.Empty;
+        string _struserDB = string.Empty;
+        DatabaseManager _UserDB; // = new DatabaseManager(_DatabaseConnection);
 
 
         public UserManagment(string UserDataBaseString)
         {
-            _userDB = UserDataBaseString;
+            _struserDB = UserDataBaseString;
+            _UserDB = new DatabaseManager(_struserDB);
             InitializeComponent();
         }
 
         private void UserManagment_Load(object sender, EventArgs e)
         {
             GlobalFun _global = new GlobalFun();
+
+            List<List<string>> LArray = new List<List<string>>();
+            LArray = _UserDB.getAllEntries("Users");
 
 
 
